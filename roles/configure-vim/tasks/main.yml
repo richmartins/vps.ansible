@@ -1,0 +1,4 @@
+---
+# tasks file for roles/configure-vim
+- include_tasks: install-vim.yml
+- include_tasks: set-config-file-vim.yml

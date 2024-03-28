@@ -1,0 +1,60 @@
+scriptencoding utf8
+
+set encoding=utf8
+set nocompatible
+"set ffs=unix,mac
+
+filetype on
+filetype plugin on
+filetype indent on
+
+syntax on
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+set number
+set nowrap
+"set nu rnu
+
+set nobackup
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
+
+set incsearch
+set ignorecase
+
+set nohlsearch
+set mouse=a
+set scrolloff=10
+set clipboard=unnamed
+set guicursor=
+set hidden
+
+set splitright
+set splitbelow
+
+set shortmess+=c
+set signcolumn=yes
+set modifiable
+
+set noshowcmd
+set showmode
+set ruler
+
+set smartcase
+set smartindent
+set autoindent
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+
+hi ColorColumn ctermbg=8
+set colorcolumn=80
+
+set background=dark
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l

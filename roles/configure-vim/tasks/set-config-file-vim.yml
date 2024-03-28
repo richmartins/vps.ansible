@@ -1,0 +1,10 @@
+---
+  - name: set config file vim
+    become: yes
+    ansible.builtin.copy:
+      src: "{{ role_path }}/files/vimrc"
+      dest: "/home/{{ ik_ssh_user}}/.vimrc"
+      owner: root
+      group: root
+      mode: 0644
+    tags: set-config-file-vim

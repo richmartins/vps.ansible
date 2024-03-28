@@ -9,4 +9,5 @@
     - private_key_file: "{{ ik_ssh_key_path }}"
 
   roles:
+    - role: "roles/configure-vim"
     - role: "roles/configure-docker"
