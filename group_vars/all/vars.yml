@@ -1,3 +1,0 @@
-host: "{{ lookup('env', 'HOST') }}"
-password: "{{ lookup('env', 'PASSWORD') }}"
-user: "{{ lookup('env', 'USER')}}"

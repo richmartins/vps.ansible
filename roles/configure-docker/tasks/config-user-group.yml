@@ -1,0 +1,8 @@
+---
+  - name: add remote user to docker group
+    become: yes
+    ansible.builtin.user:
+      name: "{{ ik_ssh_user }}"
+      groups: docker
+      append: yes
+    tags: config-user-group

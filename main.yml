@@ -1,5 +1,12 @@
 - name: config ik vps lite
-  hosts: all
+  hosts: ik_vps
   connection: ssh
+  gather_facts: no
+  vars_files:
+    - vars/secret.yml
+  remote_user: "{{ ik_ssh_user }}"
+  vars:
+    - private_key_file: "{{ ik_ssh_key_path }}"
+
   roles:
     - role: "roles/configure-docker"

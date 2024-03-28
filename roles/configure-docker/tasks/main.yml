@@ -1,2 +1,5 @@
 ---
 # tasks file for roles/configure-docker
+# - include_tasks: test-hello-world.yml
+- include_tasks: install-docker.yml
+- include_tasks: config-user-group.yml

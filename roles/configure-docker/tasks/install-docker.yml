@@ -1,0 +1,36 @@
+---
+  - name: install docker dependencies
+    become: yes
+    ansible.builtin.apt:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    loop:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - lsb-release
+    tags: install-docker
+
+  - name: add docker gpg key
+    become: yes
+    ansible.builtin.apt_key:
+      url: https://download.docker.com/linux/debian/gpg
+      state: present
+    tags: install-docker
+
+  - name: add docker repository
+    become: yes
+    ansible.builtin.apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/debian bookworm stable
+      state: present
+    tags: install-docker
+
+  - name: install docker
+    become: yes
+    ansible.builtin.apt:
+      name: docker-ce
+      state: present
+      update_cache: yes
+    tags: install-docker
