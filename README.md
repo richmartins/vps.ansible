@@ -1,11 +1,10 @@
 # VPS.ANSIBLE
 
-setup for personal [ik](infomaniak.com) VPS
+setup for personal [ik](https://infomaniak.com) VPS
 
 # Requirments
 
 - [Ansible](https://www.ansible.com/)
-
 
 # Usage
 
