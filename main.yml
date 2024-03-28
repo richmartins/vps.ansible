@@ -1,0 +1,5 @@
+- name: config ik vps lite
+  hosts: all
+  connection: ssh
+  roles:
+    - role: "roles/configure-docker"
