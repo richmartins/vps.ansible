@@ -11,3 +11,4 @@
   roles:
     - role: "roles/configure-vim"
     - role: "roles/configure-docker"
+    - role: "roles/configure-tmux"

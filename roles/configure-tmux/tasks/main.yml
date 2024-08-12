@@ -1,0 +1,4 @@
+---
+# tasks file for roles/configure-tmux
+- include_tasks: install-tmux.yml
+- include_tasks: set-config-file-tmux.yml
