@@ -3,7 +3,7 @@
     become: yes
     ansible.builtin.copy:
       src: "{{ role_path }}/files/vimrc"
-      dest: "/home/{{ ik_ssh_user}}/.vimrc"
+      dest: "{{ ansible_env.HOME }}/.vimrc"
       owner: root
       group: root
       mode: 0644

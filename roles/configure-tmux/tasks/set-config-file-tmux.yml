@@ -4,7 +4,7 @@
     become: yes
     ansible.builtin.copy:
       src: "{{ role_path }}/files/tmux.conf"
-      dest: "/home/{{ ik_ssh_user}}/.tmux.conf"
+      dest: "{{ ansible_env.HOME }}/.tmux.conf"
       owner: root
       group: root
       mode: 0644

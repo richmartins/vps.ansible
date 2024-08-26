@@ -1,4 +1,0 @@
----
-- name: test hello world
-  ansible.builtin.debug:
-    msg: "connected to VPS"

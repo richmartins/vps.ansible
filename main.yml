@@ -1,13 +1,7 @@
-- name: config ik vps lite
+- name: Default setup for cloud debian/ubuntu instances
   hosts: all
   connection: ssh
-  gather_facts: no
-  vars_files:
-    - vars/secret.yml
-  remote_user: "{{ ik_ssh_user }}"
-  vars:
-    - private_key_file: "{{ ik_ssh_key_path }}"
-
+  gather_facts: yes
   roles:
     - role: "roles/configure-vim"
     - role: "roles/configure-docker"
